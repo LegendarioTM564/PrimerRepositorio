@@ -78,7 +78,7 @@ body{
 
 /* toggle */
 
-.nav-toggle {
+.nav .nav-toggle {
     color: #f2f1ed;
     background: none;
     border: none;
@@ -295,6 +295,7 @@ border: 2px solid #f2f1ed;
 
 .works-img {
   border:3px solid #988345;
+  width: 100%;
 }
 
 .works-img:hover{
@@ -310,7 +311,7 @@ border: 2px solid #f2f1ed;
 
 /* nav-celular*/
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     
     body {
       padding-top: 70px;
@@ -353,7 +354,7 @@ border: 2px solid #f2f1ed;
       text-decoration: underline rgb(16,16,17);
     }
   
-    .nav-toggle {
+     .nav .nav-toggle {
       display: block;
     }
   
