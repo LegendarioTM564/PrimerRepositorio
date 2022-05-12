@@ -14,13 +14,13 @@ section[id]{
 
 body{
     font-family: 'Exo 2', sans-serif;
-    background-color:  rgb(16,16,17);
-    background: linear-gradient(90deg, rgba(16,16,17,1) 50%, rgba(22,23,23,1) 100%);
+    background-color:  rgb(15, 15, 18);
+    background: linear-gradient(90deg, rgba(16,16,17,1) 50%, rgb(22, 23, 23) 100%);
     padding: 90px 20px 0;    
 }
 
 .header {
-    background-color:  rgb(16,16,17);
+    background-color:  rgb(16, 16, 17);
     background: linear-gradient(90deg, rgba(16,16,17,1) 50%, rgba(22,23,23,1) 100%);
     height: 80px;
     position: fixed;
@@ -96,6 +96,98 @@ body{
 .vertical-padding {
   padding-top: 25px;
   padding-bottom: 25px;
+}
+
+.container__background-triangle{
+  max-width: 1200px;
+  height: 600px;
+  margin: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+
+.triangle{
+  width: 300px;
+  height: 300px;
+  background: #101011;
+  position: absolute;
+}
+
+.triangle1{
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(to left, #98834589, #f2f1eda2);
+  right: 100px;
+  top: 100px;
+  opacity: 0.7;
+  animation: t1 8s ease infinite;
+}
+
+.triangle2{
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(to left, #101011 , #988345);
+  top: 350px;
+  opacity: 0.7;
+  animation: t2 9s ease infinite;
+}
+
+.triangle3{
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(to left, #f2f1eda2, #101011);
+  left: 200px;
+  opacity: 0.3;
+  animation: t3 7s ease infinite;
+}
+
+.triangle4{
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(to left, #f2f1eda2, #f2f1ed);
+  left: -350px;
+  top:450px;
+  opacity: 0.1;
+  animation: t3 7s ease infinite;
+}
+
+@keyframes t1 {
+  0%{
+      transform: rotate(45deg) translateY(0px);
+  }
+  50%{
+      transform: rotate(45deg) translateY(20px);
+  }
+  100%{
+      transform: rotate(45deg) translateY(0px);
+  }
+}
+
+@keyframes t2 {
+  0%{
+      transform: rotate(65deg) translateY(0px);
+  }
+  50%{
+      transform: rotate(65deg) translateY(20px);
+  }
+  100%{
+      transform: rotate(65deg) translateY(0px);
+  }
+}
+
+@keyframes t3 {
+  0%{
+      transform: rotate(45deg) translateY(0px);
+  }
+  50%{
+      transform: rotate(45deg) translateY(20px);
+  }
+  100%{
+      transform: rotate(45deg) translateY(0px);
+  }
 }
 
 .profile {
@@ -221,18 +313,6 @@ body{
   text-decoration: underline #988345;
 }
 
-.skills-list{
-        text-align: right;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        color: white;
-}
-
-.skill-nombre{
-        color: #988345;
-        font-weight: 600;
-}
-
 .container-skills .skills {
   text-align: right;
   padding-top: 10px;
@@ -240,9 +320,20 @@ body{
   color: white;
 }
 
+.container-skills .skills{
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+
 .container-skills .skills .skill-nombre{
   color: #988345;
   font-weight: 600;
+  position: relative;
+  text-transform: uppercase;
+  top: 50px;
+  margin-bottom: 5px;
 }
 
 .container-skills .skills .html {
@@ -251,19 +342,38 @@ body{
   border: 2px solid #f2f1ed;
 }
 
-.container-skills .skills .css {width: 50%; 
+.container-skills .skills .css {
+  width: 50%; 
+  background-color: #988345;
+  background-color: #988345;
+  border: 2px solid #f2f1ed;
+}
+
+.container-skills .skills .boot {
+  width: 5%; 
   background-color: #988345;
   background-color: #988345;
 border: 2px solid #f2f1ed;
 }
 
-.container-skills .skills .js {width: 0%; 
+.container-skills .skills .responsive {
+  width: 30%;
+  left: -12px; 
   background-color: #988345;
   background-color: #988345;
-      border: 2px solid #f2f1ed;
+  border: 2px solid #f2f1ed;
+}
+.container-skills .skills .js {
+  width: 1%;
+  left: -23px; 
+  background-color: #988345;
+  background-color: #988345;
+  border: 2px solid #f2f1ed;
 }
 
-.container-skills .skills .php {width: 0%; 
+.container-skills .skills .php {
+  width: 0%;
+  left: -23px; 
   background-color: #988345;
   background-color: #988345;
   border: 2px solid #f2f1ed;
@@ -364,6 +474,17 @@ border: 2px solid #f2f1ed;
   
     .nav-toggle:focus:not(:focus-visible) {
       outline: none;
+    }
+  }
+
+  @media (min-width: 950px) {
+    .horizontal-padding {
+      padding-left: 70px;
+      padding-right: 70px;
+    }
+    .vertical-padding {
+      padding-top: 70px;
+      padding-bottom: 70px;
     }
   }
 
